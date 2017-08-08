@@ -1,0 +1,26 @@
+{
+    "webApiUrl":"http://172.16.1.101:8080/openmrs/ws/rest/v1/",
+    "identifierType":"8d793bee-c2cc-11de-8d13-0010c6dffd0f",
+    "idgenUrl" : "http://172.16.1.101:8080/openmrs/module/idgen/generateIdentifier.form?source=1&username=admin&password=Admin123",
+    "phoneNumberAttributeUUID":"a96b5509-5fa2-4625-abb1-f5f60a76cd4d",
+    "defaultLocation":
+        {
+            "uuid": "c0937b97-1691-11df-97a5-7038c432aabf",
+            "display": "Wishard Hospital",
+            "name": "Wishard Hospital",
+            "description": null,
+            "address1": null,
+            "address2": null,
+            "cityVillage": null,
+            "stateProvince": null,
+            "country": null,
+            "postalCode": null,
+            "latitude": null,
+            "longitude": null,
+            "countyDistrict": null,
+            "address3": null,
+            "address4": null,
+            "address5": null,
+            "address6": null
+        }
+}

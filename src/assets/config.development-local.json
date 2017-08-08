@@ -1,0 +1,26 @@
+{
+    "webApiUrl":"http://localhost:8080/openmrs/ws/rest/v1/",
+    "idgenUrl" : "http://localhost:8080/openmrs/module/idgen/generateIdentifier.form?source=1&username=admin&password=Admin123",
+    "identifierType":"8d793bee-c2cc-11de-8d13-0010c6dffd0f",
+    "phoneNumberAttributeUUID": "880a4ca9-c916-4a4d-a4a2-42bd7c0bd2cb",
+    "defaultLocation":
+        {
+            "uuid": "8d6c993e-c2cc-11de-8d13-0010c6dffd0f",
+            "display": "Unknown Location",
+            "name": "Unknown Location",
+            "description": null,
+            "address1": "",
+            "address2": "",
+            "cityVillage": "",
+            "stateProvince": "",
+            "country": "",
+            "postalCode": "",
+            "latitude": null,
+            "longitude": null,
+            "countyDistrict": null,
+            "address3": null,
+            "address4": null,
+            "address5": null,
+            "address6": null
+        }
+}
