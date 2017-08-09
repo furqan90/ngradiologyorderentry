@@ -19,7 +19,7 @@ export class OrderListComponent implements OnInit {
       this.orders = data['orders'];
       this.ordersObservable = Observable.of(this.orders);
 
-      if(this.orders)
+      if(this.orders && this.orders.length)
       {
         this.pageTitle = this.pageTitle + ` - ${this.orders[0].patient.display}`;
       }
