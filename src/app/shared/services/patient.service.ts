@@ -92,13 +92,7 @@ export class PatientService extends BasicService {
       .do(data => console.log(JSON.stringify(data)))
       .catch(this.handleError);
   }
-
-  private handleError(error: Response): Observable<any> {
-
-    console.error(error);
-    return Observable.throw(error.json() || 'Server error');
-  }
-
+  
   private createNewPatient():Patient
   {
     let patient:Patient = new Patient();

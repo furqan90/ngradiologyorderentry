@@ -45,10 +45,6 @@ export class PersonService extends BasicService {
             .map(res => res.json() as Person)
             .do(data => console.log(JSON.stringify(data)))
             .catch(this.handleError);
-    }
-    private handleError(error: Response): Observable<any> {
-        console.error(error);
-        return Observable.throw(error.json() || 'Server error');
-    }
+    } 
 
 }
