@@ -2,3 +2,171 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
 @import "~font-awesome/css/font-awesome.css";
 
+html {
+  position: relative;
+  min-height: 100%;
+}
+app-root div {
+    animation-duration: .5s;
+    opacity: 0;
+    animation-name: fadeIn;
+    animation-fill-mode: forwards;
+    transition: transform .5s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.panel-heading
+{
+    text-align: center;
+    color: white;
+    background-color: lightseagreen;
+    font-size: 16px;
+}
+
+th{
+    color: black;
+    background-color: aquamarine;
+}
+/* Spinner */
+.spinner {
+  font-size:300%;
+ 
+}
+
+.glyphicon-spin {
+    -webkit-animation: spin 1000ms infinite linear;
+    animation: spin 1000ms infinite linear;
+}
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+}
+@keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+}
+
+
+.loader {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    animation: spin 2s linear infinite;
+    margin-left: -50px;
+    top: 50%;
+    left: 50%;
+     position: absolute;
+  
+  z-index:10
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loader-small {
+    border: 8px solid #f3f3f3; /* Light grey */
+    border-top: 8px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-left: -25px;
+    animation: spin 2s linear infinite;
+    top: 50%;
+    left: 50%;
+     position: absolute;
+  
+  z-index:10
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.pagination
+{
+  cursor: pointer;
+}
+
+
+/*
+MAIN MENU BUTTONS - START
+*/
+
+a:hover, a:focus {
+  color: #2a6496;
+  text-decoration: none;
+}
+.square-service-block{
+	position:relative;
+	overflow:hidden;
+	margin:15px auto;
+	}
+.square-service-block a {
+  background-color: lightseagreen;
+  border-radius: 10px;
+  display: block;
+  padding: 50px 20px;
+  text-align: center;
+  width: 100%;
+}
+.square-service-block a:hover{
+  background-color: darkslategray;
+  border-radius: 10px;
+}
+
+.ssb-icon {
+  color: #fff;
+  display: inline-block;
+  font-size: 40px;
+  margin: 0 0 20px;
+}
+
+h2.ssb-title {
+  color: #fff;
+  font-size: 17px;
+  font-weight: 200;
+  margin:0;
+  padding:0;
+  
+}
+
+/*
+MAIN MENU BUTTONS - END
+*/
+
+.breadcrumb li
+{
+    cursor: pointer
+    
+    ;
+}
+
+tr{
+    cursor: pointer;
+}

@@ -1,3 +1,50 @@
-<p>
-  order-list works!
-</p>
+<div class="container-fluid">
+  <ol class="breadcrumb">
+       <li><a [routerLink]="['/welcome']"><i class="fa fa-home"></i> Home</a></li>
+        <li><a [routerLink]="['/order-management']">Find a Patient</a></li>
+      <li class="active">Orders List</li>
+    </ol>
+  <div class="panel">
+    
+    <div class="panel-heading">{{pageTitle}}</div>
+    <div class="panel-body">
+
+        <div *ngIf="orders">
+          <div class="table-responsive table-condensed">
+            <table class="table table-striped table-bordered">
+              <thead class="thead-default">
+                <tr>
+                  <th>Accession #</th>
+                  <th>Patient</th>
+                  <th>Urgency</th>
+                  <th>Imaging Procedure</th>
+                  <th>Refering Physician</th>
+                  <th>Schedulled Date</th>
+                  <th>Date Activated</th>
+                  <th>Date Stopped</th>
+                  <th>Show JSON</th>
+                </tr>
+              </thead>
+              <tbody >
+                <tr *ngFor="let order of ordersObservable |async | paginate: { itemsPerPage: 10, currentPage: p}">
+                  <td>{{order.accessionNumber}}</td>
+                  <td>{{order.patient.display}}</td>
+                  <td>{{order.urgency}}</td>
+                  <td>{{order.concept.display}}</td>
+                  <td>{{order.orderer.display}}</td>
+                  <td>{{order.scheduledDate}}</td>
+                  <td>{{order.dateActivated}}</td>
+                  <td>{{order.dateStopped}}</td>
+                  <td style="text-align:center"><a (click)="showJSON(order.uuid)" ><span><i class="fa fa-file"></i></span></a></td>
+                </tr>
+              </tbody>
+
+            </table>
+
+          </div>
+          <div class="pagination">
+            <pagination-controls (pageChange)="p = $event" autoHide="true"></pagination-controls>
+          </div>
+        </div>
+    </div>
+  </div>
